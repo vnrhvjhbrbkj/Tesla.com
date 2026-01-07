@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%), url('https://via.placeholder.com/1920x1080/000000/ffffff?text=Tesla+Hero');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans min-h-screen">
+    <header class="bg-black bg-opacity-90 text-white py-6 shadow-lg backdrop-blur-md fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center animate-fade-in-up">
+                <img src="https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon-32x32.png" alt="Tesla Logo" class="w-10 h-10 mr-3">
+                <h1 class="text-4xl font-bold italic">Tesla</h1>
+            </div>
+            <nav class="animate-fade-in-up delay-200">
+                <ul class="flex space-x-6">
+                    <li><a href="#buy" class="hover:text-red-400 transition-colors duration-300">Buy</a></li>
+                    <li><a href="#sell" class="hover:text-red-400 transition-colors duration-300">Sell</a></li>
+                    <li><a href="#contact" class="hover:text-red-400 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg bg-cover bg-center min-h-screen flex items-center justify-center pt-24">
+        <div class="text-center animate-fade-in-up">
+            <h2 class="text-6xl font-bold mb-6 text-white drop-shadow-lg">Welcome to Tesla</h2>
+            <p class="text-xl mb-8 text-gray-200">Buy or Sell Your Dream Tesla Today</p>
+            <button onclick="scrollToSection('buy')" class="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg">Get Started</button>
+        </div>
+    </section>
+
+    <section id="buy" class="py-20 bg-gradient-to-b from-gray-800 to-black">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white animate-fade-in-up">Buy a Tesla</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-200">
+                    <img src="model-s.png" alt="Model S" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Model S</h4>
+                    <p class="text-gray-300 mb-4">Electric sedan with premium features.</p>
+                    <a href="model-s.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-400">
+                    <img src="model-3.png" alt="Model 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Model 3</h4>
+                    <p class="text-gray-300 mb-4">Affordable electric car for everyone.</p>
+                    <a href="model-3.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-600">
+                    <img src="model-x.png" alt="Model X" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Model X</h4>
+                    <p class="text-gray-300 mb-4">SUV with falcon wing doors.</p>
+                    <a href="model-x.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-200">
+                    <img src="model-y.png" alt="Model Y" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Model Y</h4>
+                    <p class="text-gray-300 mb-4">Compact SUV for family adventures.</p>
+                    <a href="model-y.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-400">
+                    <img src="cybertruck.png" alt="Cybertruck" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Cybertruck</h4>
+                    <p class="text-gray-300 mb-4">Futuristic electric pickup truck.</p>
+                    <a href="cybertruck.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in-up delay-600">
+                    <img src="roadster.png" alt="Roadster" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Roadster</h4>
+                    <p class="text-gray-300 mb-4">High-performance electric sports car.</p>
+                    <a href="roadster.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full inline-block text-center transition-all duration-300 hover:scale-105">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sell" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white animate-fade-in-up">Sell Your Tesla</h3>
+            <form id="sellForm" class="max-w-lg mx-auto bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl shadow-xl animate-fade-in-up delay-200">
+                <div class="mb-6">
+                    <label for="model" class="block text-white font-semibold mb-2">Model</label>
+                    <select id="model" class="w-full p-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <option>Select Model</option>
+                        <option>Model S</option>
+                        <option>Model 3</option>
+                        <option>Model X</option>
+                        <option>Model Y</option>
+                        <option>Cybertruck</option>
+                        <option>Roadster</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="year" class="block text-white font-semibold mb-2">Year</label>
+                    <input type="number" id="year" class="w-full p-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="e.g., 2020">
+                </div>
+                <div class="mb-6">
+                    <label for="mileage" class="block text-white font-semibold mb-2">Mileage</label>
+                    <input type="number" id="mileage" class="w-full p-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="e.g., 15000">
+                </div>
+                <div class="mb-6">
+                    <label for="condition" class="block text-white font-semibold mb-2">Condition</label>
+                    <select id="condition" class="w-full p-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <option>Excellent</option>
+                        <option>Good</option>
+                        <option>Fair</option>
+                        <option>Poor</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full w-full font-semibold transition-all duration-300 hover:scale-105">Submit for Valuation</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center animate-fade-in-up">
+            <h3 class="text-4xl font-bold mb-8 text-white">Contact Us</h3>
+            <p class="text-xl mb-4 text-gray-300">Email: info@tesla.com</p>
+            <p class="text-xl text-gray-300">Phone: +1 (123) 456-7890</p>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-6 text-center shadow-lg">
+        <p class="text-gray-400">&copy; 2026 Tesla. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('sellForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const model = document.getElementById('model').value;
+            const year = document.getElementById('year').value;
+            const mileage = document.getElementById('mileage').value;
+            const condition = document.getElementById('condition').value;
+            alert(`Thank you! We'll contact you soon for your ${model} (${year}, ${mileage} miles, ${condition} condition).`);
+        });
+    </script>
+</body>
+</html>

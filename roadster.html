@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadster - Tesla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%), url('roadster.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans min-h-screen">
+    <header class="bg-black bg-opacity-90 text-white py-6 shadow-lg backdrop-blur-md fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center animate-fade-in-up">
+                <img src="https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon-32x32.png" alt="Tesla Logo" class="w-10 h-10 mr-3">
+                <a href="index.html" class="text-3xl font-bold italic hover:text-red-400 transition-colors duration-300">Tesla</a>
+            </div>
+            <nav class="animate-fade-in-up delay-200">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html#buy" class="hover:text-red-400 transition-colors duration-300">Back to Models</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-24">
+        <div class="text-center animate-fade-in-up">
+            <h1 class="text-6xl font-bold mb-6 text-white drop-shadow-lg">Roadster</h1>
+            <p class="text-xl mb-8 text-gray-200">High-performance electric sports car</p>
+            <button onclick="alert('Purchase process initiated for Roadster')" class="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg">Buy Now</button>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl shadow-xl animate-fade-in-up delay-200">
+                    <h2 class="text-3xl font-semibold mb-6 text-white">Specifications</h2>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Range: Up to 620 miles</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Acceleration: 0-60 mph in 1.9 seconds</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Top Speed: 250 mph</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Seating: 4 adults</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Price: Starting at $200,000</li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl shadow-xl animate-fade-in-up delay-400">
+                    <h2 class="text-3xl font-semibold mb-6 text-white">Features</h2>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>SpaceX cold gas thrusters</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Autopilot</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Premium interior</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Large touchscreen</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-4"></span>Supercharger network access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-6 text-center shadow-lg">
+        <p class="text-gray-400">&copy; 2026 Tesla. All rights reserved.</p>
+    </footer>
+</body>
+</html>
